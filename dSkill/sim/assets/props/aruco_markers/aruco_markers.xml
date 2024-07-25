@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco>
+    <asset>
+        <!-- Definition of ArUco Textures -->
+        <texture type="2d" name="marker0" file="aruco_4x4_0.png"/>
+        <texture type="2d" name="marker1" file="aruco_4x4_1.png"/>
+        <texture type="2d" name="marker2" file="aruco_4x4_2.png"/>
+
+        <!-- Definition of Materials Using ArUco Textures -->
+        <material name="card"/>
+        <material name="aruco_0" texture="marker0"/>
+        <material name="aruco_1" texture="marker1"/>
+        <material name="aruco_2" texture="marker2"/>
+    </asset>
+</mujoco>

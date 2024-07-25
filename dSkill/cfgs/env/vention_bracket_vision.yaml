@@ -1,0 +1,41 @@
+# @package _global_
+
+defaults:
+  - _self_
+
+env:
+  name: "vertical_slide"
+  object_name: "vention_bracket"
+  object_offset: [0.0, 0, -0.1]
+  state_rand: False
+  use_priviledged_info: False
+  friction_lower: 0.9
+  use_gripper_reflex: True
+  use_tcp_in_obs: True
+  use_gripper_joints_in_obs: False
+  use_sparse_reward: False
+  cameras: ["third_person_camera", "upper_wrist_camera", "lower_wrist_camera"]
+  camera_resolution: [84, 84]
+  pixels_rgb: True
+  pixels_segment: False
+  pixels_masked: False
+  pixels_diff: False
+  create:
+    _target_: dSkill.sim.envs.vertical_slide.VerticalSlideVision
+    use_priviledged_info: ${env.use_priviledged_info}
+    friction_lower: ${env.friction_lower}
+    object_name: "${env.object_name}"
+    object_offset: "${env.object_offset}"
+    use_gripper_reflex: ${env.use_gripper_reflex}
+    use_tcp_in_obs: ${env.use_tcp_in_obs}
+    use_gripper_joints_in_obs: ${env.use_gripper_joints_in_obs}
+    use_sparse_reward: ${env.use_sparse_reward}
+    cameras: "${env.cameras}"
+    camera_resolution: "${env.camera_resolution}"
+    pixels: "${pixels}"
+    pixels_rgb: "${env.pixels_rgb}"
+    pixels_segment: "${env.pixels_segment}"
+    pixels_masked: "${env.pixels_masked}"
+    pixels_diff: "${env.pixels_diff}"
+  episode_length: 100
+  stddev_schedule: 'linear(1, 0.1, 500000)'

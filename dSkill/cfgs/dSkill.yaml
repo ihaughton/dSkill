@@ -1,0 +1,17 @@
+# Global configs that apply to all tasks
+defaults:
+  - robobase_config
+  - override launch: drqv2
+
+tb:  # TensorBoard
+  use: false
+  log_dir: /tmp/robobase_tb_logs
+
+hydra:
+  run:
+    dir: ./exp_local/${now:%Y.%m.%d}/${wandb.name}
+  sweep:
+    dir: ./exp_local/${now:%Y.%m.%d}/${wandb.name}
+    subdir: ${hydra.job.num}
+  searchpath:
+    - pkg://robobase.cfgs

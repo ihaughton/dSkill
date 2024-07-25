@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="wine_glass">
+  <compiler angle="radian" meshdir="assets" texturedir="assets" autolimits="true"/>
+  <asset>
+    <material name="wine_glass" specular="0.8" shininess="0.5" rgba="0.9 0.9 0.95 0.7"/>
+    <mesh file="wine_glass.obj"/>
+    <mesh file="wine_glass_collision_001.obj"/>
+    <mesh file="wine_glass_collision_002.obj"/>
+    <mesh file="wine_glass_collision_003.obj"/>
+    <mesh file="wine_glass_collision_004.obj"/>
+    <mesh file="wine_glass_collision_005.obj"/>
+    <mesh file="wine_glass_collision_006.obj"/>
+    <mesh file="wine_glass_collision_007.obj"/>
+    <mesh file="wine_glass_collision_008.obj"/>
+    <mesh file="wine_glass_collision_009.obj"/>
+    <mesh file="wine_glass_collision_010.obj"/>
+    <mesh file="wine_glass_collision_011.obj"/>
+    <mesh file="wine_glass_collision_012.obj"/>
+    <mesh file="wine_glass_collision_013.obj"/>
+    <mesh file="wine_glass_collision_014.obj"/>
+    <mesh file="wine_glass_collision_015.obj"/>
+    <mesh file="wine_glass_collision_016.obj"/>
+    <mesh file="wine_glass_collision_017.obj"/>
+    <mesh file="wine_glass_collision_018.obj"/>
+    <mesh file="wine_glass_collision_019.obj"/>
+    <mesh file="wine_glass_collision_020.obj"/>
+    <mesh file="wine_glass_collision_021.obj"/>
+    <mesh file="wine_glass_collision_022.obj"/>
+    <mesh file="wine_glass_collision_023.obj"/>
+    <mesh file="wine_glass_collision_024.obj"/>
+    <mesh file="wine_glass_collision_025.obj"/>
+    <mesh file="wine_glass_collision_026.obj"/>
+    <mesh file="wine_glass_collision_027.obj"/>
+    <mesh file="wine_glass_collision_028.obj"/>
+    <mesh file="wine_glass_collision_029.obj"/>
+    <mesh file="wine_glass_collision_030.obj"/>
+    <mesh file="wine_glass_collision_031.obj"/>
+    <mesh file="wine_glass_collision_032.obj"/>
+    <mesh file="wine_glass_collision_033.obj"/>
+    <mesh file="wine_glass_collision_034.obj"/>
+    <mesh file="wine_glass_collision_035.obj"/>
+    <mesh file="wine_glass_collision_036.obj"/>
+    <mesh file="wine_glass_collision_037.obj"/>
+    <mesh file="wine_glass_collision_038.obj"/>
+    <mesh file="wine_glass_collision_039.obj"/>
+    <mesh file="wine_glass_collision_040.obj"/>
+    <mesh file="wine_glass_collision_041.obj"/>
+    <mesh file="wine_glass_collision_042.obj"/>
+  </asset>
+  <default>
+    <default class="wine_glass">
+      <default class="visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2" material="wine_glass"/>
+      </default>
+      <default class="collision">
+        <geom type="mesh" group="3" density="1000" solimp="0.98 0.99 0.001" solref="0.004 1"/>
+      </default>
+      <geom pos="-0.08 0 0" euler="-1.57 0 -1.57"/>
+    </default>
+  </default>
+  <worldbody>
+    <body name="wine_glass" childclass="wine_glass">
+      <geom name="mesh" mesh="wine_glass" class="visual"/>
+      <geom name="collider_001" mesh="wine_glass_collision_001" class="collision"/>
+      <geom name="collider_002" mesh="wine_glass_collision_002" class="collision"/>
+      <geom name="collider_003" mesh="wine_glass_collision_003" class="collision"/>
+      <geom name="collider_004" mesh="wine_glass_collision_004" class="collision"/>
+      <geom name="collider_005" mesh="wine_glass_collision_005" class="collision"/>
+      <geom name="collider_006" mesh="wine_glass_collision_006" class="collision"/>
+      <geom name="collider_007" mesh="wine_glass_collision_007" class="collision"/>
+      <geom name="collider_008" mesh="wine_glass_collision_008" class="collision"/>
+      <geom name="collider_009" mesh="wine_glass_collision_009" class="collision"/>
+      <geom name="collider_010" mesh="wine_glass_collision_010" class="collision"/>
+      <geom name="collider_011" mesh="wine_glass_collision_011" class="collision"/>
+      <geom name="collider_012" mesh="wine_glass_collision_012" class="collision"/>
+      <geom name="collider_013" mesh="wine_glass_collision_013" class="collision"/>
+      <geom name="collider_014" mesh="wine_glass_collision_014" class="collision"/>
+      <geom name="collider_015" mesh="wine_glass_collision_015" class="collision"/>
+      <geom name="collider_016" mesh="wine_glass_collision_016" class="collision"/>
+      <geom name="collider_017" mesh="wine_glass_collision_017" class="collision"/>
+      <geom name="collider_018" mesh="wine_glass_collision_018" class="collision"/>
+      <geom name="collider_019" mesh="wine_glass_collision_019" class="collision"/>
+      <geom name="collider_020" mesh="wine_glass_collision_020" class="collision"/>
+      <geom name="collider_021" mesh="wine_glass_collision_021" class="collision"/>
+      <geom name="collider_022" mesh="wine_glass_collision_022" class="collision"/>
+      <geom name="collider_023" mesh="wine_glass_collision_023" class="collision"/>
+      <geom name="collider_024" mesh="wine_glass_collision_024" class="collision"/>
+      <geom name="collider_025" mesh="wine_glass_collision_025" class="collision"/>
+      <geom name="collider_026" mesh="wine_glass_collision_026" class="collision"/>
+      <geom name="collider_027" mesh="wine_glass_collision_027" class="collision"/>
+      <geom name="collider_028" mesh="wine_glass_collision_028" class="collision"/>
+      <geom name="collider_029" mesh="wine_glass_collision_029" class="collision"/>
+      <geom name="collider_030" mesh="wine_glass_collision_030" class="collision"/>
+      <geom name="collider_031" mesh="wine_glass_collision_031" class="collision"/>
+      <geom name="collider_032" mesh="wine_glass_collision_032" class="collision"/>
+      <geom name="collider_033" mesh="wine_glass_collision_033" class="collision"/>
+      <geom name="collider_034" mesh="wine_glass_collision_034" class="collision"/>
+      <geom name="collider_035" mesh="wine_glass_collision_035" class="collision"/>
+      <geom name="collider_036" mesh="wine_glass_collision_036" class="collision"/>
+      <geom name="collider_037" mesh="wine_glass_collision_037" class="collision"/>
+      <geom name="collider_038" mesh="wine_glass_collision_038" class="collision"/>
+      <geom name="collider_039" mesh="wine_glass_collision_039" class="collision"/>
+      <geom name="collider_040" mesh="wine_glass_collision_040" class="collision"/>
+      <geom name="collider_041" mesh="wine_glass_collision_041" class="collision"/>
+      <geom name="collider_042" mesh="wine_glass_collision_042" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>

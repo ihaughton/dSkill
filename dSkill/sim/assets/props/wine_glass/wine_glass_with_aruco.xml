@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="wine_glass_with_aruco">
+
+    <include file="wine_glass.xml"/>
+    <include file="../aruco_markers/aruco_markers.xml"/>
+
+    <worldbody>
+
+        <body name="wine_glass_with_aruco">
+
+            <!-- Central site used for reference or visualization -->
+            <site name="center" pos="0 0 0" euler="0 0 0" type="sphere" size="0.0001 0.0001 0.0001" rgba="0.9 0.9 0.9 1" group="4"/>
+
+            <!-- Aruco marker 1 -->-0.06
+            <geom name="aruco1_collider" type="box" size="0.0225 0.0225 0.0005" material="card" pos="0.145 -0.021 0.005" euler="0 3.14 1.57" mass="0" rgba="1 1 1 1" contype="0" conaffinity="0" group="3"/>
+            <geom type="box" size="0.0175 0.0175 0.001" material="aruco_1" pos="0.145 -0.021 0.005" euler="0 3.14 1.57" rgba="1 1 1 1" contype="0" conaffinity="0" group="3"/>
+            <site name="aruco_1" pos="0.145 -0.021 0.005" euler="0 3.14 1.57" type="sphere" size="0.0001" group="4"/>
+
+            <!-- Aruco marker 2 -->
+            <geom type="box" size="0.0175 0.0175 0.001" material="aruco_2" pos="-0.055 -0.021 0.005" euler="0 3.14 1.57" rgba="1 1 1 1" contype="0" conaffinity="0" group="3"/>
+            <site name="aruco_2" pos="-0.055 -0.021 0.005" euler="0 3.14 1.57" type="sphere" size="0.0001" group="4"/>
+        </body>
+    </worldbody>
+</mujoco>

@@ -1,0 +1,17 @@
+# @package _global_
+
+defaults:
+  - _self_
+
+env:
+  name: "plate_stack"
+  use_gripper_reflex: False
+  use_tcp_in_obs: True
+  use_gripper_joints_in_obs: False
+  create:
+    _target_: dSkill.sim.envs.plate_stack.PlateStack
+    use_gripper_reflex: ${env.use_gripper_reflex}
+    use_tcp_in_obs: ${env.use_tcp_in_obs}
+    use_gripper_joints_in_obs: ${env.use_gripper_joints_in_obs}
+  episode_length: 100
+  stddev_schedule: 'linear(1, 0.1, 500000)'

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="knife">
+  <compiler angle="radian" meshdir="assets" texturedir="assets" autolimits="true"/>
+  <asset>
+    <mesh file="props_knife.obj"/>
+  </asset>
+  <default>
+    <default class="knife">
+      <material specular="0.9" shininess="0.9" rgba="0.8 0.8 0.8 1"/>
+      <default class="visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+      </default>
+      <default class="collision">
+        <geom type="mesh" group="3"/>
+      </default>
+      <geom euler="3.14 -1.57 3.14"/>
+    </default>
+  </default>
+  <worldbody>
+    <body name="knife" childclass="knife">
+      <geom name="mesh" mesh="props_knife" class="visual"/>
+      <geom name="collider" mesh="props_knife" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>

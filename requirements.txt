@@ -1,0 +1,8 @@
+hydra-joblib-launcher
+pyquaternion
+dm_control
+minimalmodbus
+opencv-contrib-python==4.9.0.80
+opencv-python==4.7.0.68
+imageio
+gymnasium

@@ -1,0 +1,24 @@
+# @package _global_
+
+defaults:
+  - _self_
+
+env:
+  name: "vertical_slide"
+  object_name: "mug"
+  object_offset: [-0.03, 0, -0.02]
+  state_rand: True
+  friction_lower: 0.9
+  use_gripper_reflex: True
+  use_tcp_in_obs: False
+  use_gripper_joints_in_obs: False
+  create:
+    _target_: dSkill.sim.envs.vertical_slide.VerticalSlideDomainRand
+    friction_lower: ${env.friction_lower}
+    object_name: "${env.object_name}"
+    object_offset: "${env.object_offset}"
+    use_gripper_reflex: ${env.use_gripper_reflex}
+    use_tcp_in_obs: ${env.use_tcp_in_obs}
+    use_gripper_joints_in_obs: ${env.use_gripper_joints_in_obs}
+  episode_length: 100
+  stddev_schedule: 'linear(1, 0.1, 500000)'

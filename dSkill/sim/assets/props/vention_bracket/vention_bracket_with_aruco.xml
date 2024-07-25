@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="vention_bracket_with_aruco">
+    <include file="vention_bracket.xml"/>
+    <include file="../aruco_markers/aruco_markers.xml"/>
+
+    <worldbody>
+        <body name="vention_bracket_with_aruco">
+
+            <!-- Central site used for reference or visualization -->
+            <site name="center" pos="0 0 0" euler="0 0 0" type="sphere" size="0.0001 0.0001 0.0001" rgba="0.9 0.9 0.9 1" group="4"/>
+
+            <!-- ArUco marker 1 -->
+            <geom name="aruco1_collider" type="box" size="0.0225 0.0225 0.0005" material="card" pos="0.1 -0.025 0.044" euler="0 3.14 1.57" rgba="1 1 1 1" conaffinity="0" contype="0" group="3"/>
+            <geom type="box" size="0.0175 0.0175 0.001" material="aruco_1" pos="0.1 -0.025 0.044" euler="0 3.14 1.57" rgba="1 1 1 1" conaffinity="0" contype="0" group="3"/>
+            <site name="aruco_1" pos="0.1 -0.025 0.044" euler="0 3.14 1.57" type="sphere" size="0.0001" group="4"/>
+
+            <!-- ArUco marker 2 -->
+            <geom name="aruco2_collider" type="box" size="0.0225 0.0225 0.0005" material="card" pos="-0.1 -0.025 0.044" euler="0 3.14 1.57" rgba="1 1 1 1" conaffinity="0" contype="0" group="3"/>
+            <geom type="box" size="0.0175 0.0175 0.0006" material="aruco_2" pos="-0.1 -0.025 0.044" euler="0 3.14 1.57" rgba="1 1 1 1" conaffinity="0" contype="0" group="3"/>
+            <site name="aruco_2" pos="-0.1 -0.025 0.044" euler="0 3.14 1.57" type="sphere" size="0.0001" group="4"/>
+        </body>
+    </worldbody>
+</mujoco>

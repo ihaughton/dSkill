@@ -1,0 +1,9 @@
+# @package _global_
+
+defaults:
+  - ../method: drqv2
+
+num_train_frames: 400000
+num_train_envs: 3
+frame_stack: 3
+pixels: True

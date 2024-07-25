@@ -1,0 +1,13 @@
+# @package _global_
+
+defaults:
+  - ../env: vention_bracket_vision  # Please specify environment to use in command line
+  - ../method: asym_actor_critic
+
+env:
+  use_priviledged_info: True
+
+num_train_frames: 400000
+num_train_envs: 3
+frame_stack: 3
+pixels: True

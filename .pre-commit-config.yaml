@@ -1,0 +1,42 @@
+exclude: '^(dSkill/tests/).*$'
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-yaml
+        exclude: bamboo-specs/bamboo.yaml
+      - id: sort-simple-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-xml
+
+  - repo: https://github.com/psf/black
+    rev: 24.3.0
+    hooks:
+      - id: black
+        args: ["--line-length=88"]  # Customize as needed
+
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.3.5
+    hooks:
+      - id: ruff
+
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: [ "--profile=black" ]
+
+  - repo: https://github.com/pycqa/pydocstyle
+    rev: "6.3.0"
+    hooks:
+      - id: pydocstyle
+        args: [ "--convention=google" ]
+        files: bigym|examples
+
+  # - repo: https://github.com/PyCQA/flake8
+  #   rev: 3.9.2  # Use the latest version or the one that suits your needs
+  #   hooks:
+  #     - id: flake8
+  #       additional_dependencies: [flake8-unused-arguments]  # Optional, for additional plugins
